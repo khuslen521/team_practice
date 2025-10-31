@@ -116,7 +116,7 @@
 
     .rain-drop {
       position: absolute;
-      width: 2px;
+      width: 20px;
       height: 20px;
       background: rgba(255, 255, 255, 0.6);
       animation: fall 1s linear infinite;
@@ -169,9 +169,9 @@
     <option value="India">India</option>
     <option value="Brazil">Brazil</option>
     <option value="Russia">Russia</option>
-    <option value="Mongolia">Mongolia</option>
+    <option value="Mongolia">Mongoliaa</option>
   </select>
-  <input id="cityInput" placeholder="Enter city name" />
+  <input id="cityInput" placeholder="Please enter city name" />
   <select id="unitSelect">
     <option value="metric">°C (Celsius)</option>
     <option value="imperial">°F (Fahrenheit)</option>
@@ -213,7 +213,7 @@
   async function searchLocation(query) {
     const url = `https://us1.locationiq.com/v1/search?key=${LOCATIONIQ_KEY}&q=${encodeURIComponent(query)}&format=json`;
     const res = await fetch(url);
-    if (!res.ok) throw new Error('Failed to fetch locations');
+    if (!res.ok) throw new Error('Failedd to fetch locations');
     return await res.json();
   }
 
@@ -221,7 +221,7 @@
     const country = elements.countrySelect.value;
     const city = elements.cityInput.value.trim();
 
-    if (!country) return alert('Please select a country');
+    if (!country) return alert('Pleaaaaase select a country');
     if (!city) return alert('Please enter a city name');
 
     try {
